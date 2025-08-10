@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>survey page</title>
+</head>
+
+<body>
+    <h1>User Feedback Survey</h1>
+    <form action="/submit-feedback" method="POST">
+        <!-- text input   -->
+        <label for="name">Your Name:</label>
+        <input type="text" name="name" id="name" placeholder="enter your name"><br>
+        <br>
+        <!-- dropdown menu -->
+        <label for="experience ">How was your experience?</label>
+        <select name="experience" id="experience">
+            <option value="">select an option--</option>
+            <option value="excellent">Excellent</option>
+            <option value="good">Good</option>
+            <option value="average">Average</option>
+            <option value="poor">Poor</option>
+        </select><br>
+        <br>
+        <!-- multiple choice  -->
+        <label for="recommend">Would you recommend us?</label><br>
+        <input type="radio" name="recommend" value="yes">Yes<br>
+        <input type="radio" name="recommend" value="no">No<br>
+        <br>
+        <!-- Checkboxes -->
+        <label>What features did you like? (Select all that apply)</label><br>
+        <input type="checkbox" name="features" value="design"> Design<br>
+        <input type="checkbox" name="features" value="usability"> Usability<br>
+        <input type="checkbox" name="features" value="performance"> Performance<br>
+        <input type="checkbox" name="features" value="support"> Customer Support<br>
+        <br>
+        <!-- Rating Scale using Range -->
+        <label for="rating">Rate our service (1 = Poor, 5 = Excellent):</label><br>
+        <input type="radio" name="rating" value="1">1 <br>
+        <input type="radio" name="rating" value="2">2 <br>
+        <input type="radio" name="rating" value="3">3 <br>
+        <input type="radio" name="rating" value="4">4 <br>
+        <input type="radio" name="rating" value="5">5 <br>
+
+        <br>
+        <!-- Textarea for longer response -->
+        <label for="comments">Additional Comments:</label><br>
+        <textarea id="comments" name="comments" rows="5" placeholder="Write your feedback..."></textarea><br>
+        <br>
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

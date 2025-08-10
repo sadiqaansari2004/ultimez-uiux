@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js task 3</title>
+</head>
+
+<body>
+    <script>
+        function calculateAge(birthYear, currentYear) {
+            // Convert to numbers if they are strings
+            birthYear = Number(birthYear);
+            currentYear = Number(currentYear);
+
+            // Validate inputs
+            if (isNaN(birthYear) || isNaN(currentYear)) {
+                return "Invalid input: Please enter valid numbers for years.";
+            }
+
+            // Calculate age
+            let age = currentYear - birthYear;
+            
+            return "you are " + age + " years old.";
+        }
+
+        // Test cases
+        console.log(calculateAge(1990, 2024));         // You are 34 years old.
+        console.log(calculateAge(2000, 1995));         // You are -5 years old.
+        console.log(calculateAge(1995, "2024"));       // You are 29 years old.
+        console.log(calculateAge("1995", 2024));       // You are 29 years old.
+        console.log(calculateAge("abcd", "xyz"));      // Invalid input: Please enter valid numbers for years.
+
+    </script>
+</body>
+
+</html>

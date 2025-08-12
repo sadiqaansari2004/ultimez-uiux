@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js task 5</title>
+</head>
+
+<body>
+    <script>
+        let numbers = [10, 5, 8, 3, 12, 6];
+        console.log(numbers);
+        // array length
+        console.log(numbers.length);
+        // push 7 at the end
+        numbers.push(7);
+        console.log(numbers);
+        // remove first element
+        numbers.shift();
+        console.log(numbers);
+        // sort array in ascending order
+        numbers.sort(function (a, b) { return a - b });
+        console.log(numbers);
+        // reverse array
+        numbers.reverse();
+        console.log(numbers);
+        console.log(numbers.includes(8));
+        // checking 8 exist in array or not
+        if (numbers.includes(8)) {
+            console.log(`8 exists in an array`);
+        }
+        else {
+            console.log(`8 doesn't exists in an array`);
+        }
+        // finding index of 12
+        console.log(`number 12 exist at index ${numbers.indexOf(12)}`);
+        // doubling each number in numbers array
+        let doubledNumbers = numbers.map((num) => num * 2);
+        console.log(doubledNumbers);
+    </script>
+</body>
+
+</html>
